@@ -8,6 +8,7 @@ import {
   Dimensions,
   ImageBackground
 } from "react-native";
+import LinearGradient from "react-native-linear-gradient";
 
 const { width, height } = Dimensions.get("screen");
 
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     paddingHorizontal: 36,
     paddingTop: 40,
-    paddingBottom: 24
+    paddingBottom: 2
   },
   // visits: {
   //   paddingHorizontal: 36
@@ -60,13 +61,14 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     paddingHorizontal: 36,
     marginHorizontal: 36,
-    backgroundColor: "#55a8fd",
+    marginTop: 25,
+    backgroundColor: "white",
     position: "relative"
   },
   visitDate: {
     paddingHorizontal: 36,
     position: "absolute",
-    bottom: -20,
+    bottom: 20,
     right: 60,
     left: 60,
     padding: 12,
@@ -75,15 +77,15 @@ const styles = StyleSheet.create({
   },
 
   shadow2: {
-    shadowColor: "#000",
+    shadowColor: "#00d4ff",
     shadowOffset: {
-      width: 4,
-      height: 6
+      width: 0,
+      height: 0
     },
-    shadowOpacity: 0.3,
-    shadowRadius: 10.32,
+    shadowOpacity: 0.7,
+    shadowRadius: 13,
 
-    elevation: 16
+    elevation: 0
   }
 });
 class Main extends Component {
@@ -91,12 +93,10 @@ class Main extends Component {
     header: (
       <View style={[styles.flex, styles.row, styles.header]}>
         <View>
-          <Text>Search for</Text>
-          <Text>Your visits</Text>
+          <Text>Hello, Damian</Text>
+          <Text style={{ fontSize: 35, fontWeight: "bold" }}>Your visits</Text>
         </View>
-        <View>
-          <Text>Avatar</Text>
-        </View>
+        <View />
       </View>
     )
   };
@@ -123,7 +123,10 @@ class Main extends Component {
   renderVisit = item => {
     return (
       <View style={{ position: "relative" }}>
-        <View
+        <LinearGradient
+          colors={["#18d7ff", "#54e3ff", "#00d4ff"]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 1 }}
           style={[
             styles.flex,
             styles.row,
@@ -131,8 +134,8 @@ class Main extends Component {
             { alignItems: "center", justifyContent: "center" }
           ]}
         >
-          <Text style={{ fontSize: 40 }}>{item.title}</Text>
-        </View>
+          <Text style={{ fontSize: 55, fontWeight: "bold" }}>{item.title}</Text>
+        </LinearGradient>
         <View style={[styles.visitDate, { alignItems: "center" }]}>
           <Text style={{ fontSize: 25 }}>{item.date}</Text>
         </View>
@@ -142,7 +145,7 @@ class Main extends Component {
   renderDrugs = () => {
     return (
       <View style={[styles.flex, styles.column]}>
-        <Text />
+        <Text>sss</Text>
       </View>
     );
   };
