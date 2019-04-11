@@ -11,7 +11,7 @@ export default createStackNavigator(
     Details
   },
   {
-    initialRouteName: "Main",
+    initialRouteName: "Details",
     defaultNavigationOptions: {
       //   header: null,
       headerStyle: {
