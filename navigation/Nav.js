@@ -3,15 +3,15 @@ import { Platform, StyleSheet, Text, View } from "react-native";
 import { createStackNavigator } from "react-navigation";
 
 import Main from "../components/Main";
-import Details from "../components/Details";
+import StudyInput from "../components/StudyInput";
 
 export default createStackNavigator(
   {
     Main,
-    Details
+    StudyInput
   },
   {
-    initialRouteName: "Details",
+    initialRouteName: "StudyInput",
     defaultNavigationOptions: {
       //   header: null,
       headerStyle: {

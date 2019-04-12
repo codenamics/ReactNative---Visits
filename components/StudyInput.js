@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Text, StyleSheet, View, Button, TextInput } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
-export default class Details extends Component {
+export default class StudyInput extends Component {
   constructor() {
     super();
     this.state = {
