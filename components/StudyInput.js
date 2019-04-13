@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Text, StyleSheet, View, Button, TextInput } from "react-native";
 import { createStackNavigator, createAppContainer } from "react-navigation";
-
+import { Icon } from "react-native-elements";
 export default class StudyInput extends Component {
   constructor() {
     super();
@@ -17,15 +17,25 @@ export default class StudyInput extends Component {
           flex: 1,
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center"
+          alignItems: "center",
+          position: "relative"
         }}
       >
+        <View style={{ top: 170, position: "absolute" }}>
+          <Icon
+            name="stethoscope"
+            size={100}
+            type="font-awesome"
+            color="#2d88ff"
+          />
+        </View>
         <TextInput
           style={{
-            height: 40,
+            height: 50,
             width: 300,
-            borderColor: "gray",
-            borderWidth: 1
+            borderColor: "#adadad",
+            borderWidth: 1,
+            borderRadius: 5
           }}
           onChangeText={text => this.setState({ text })}
           value={this.state.text}

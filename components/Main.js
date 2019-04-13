@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View } from "react-native";
-
+import { Text, StyleSheet, View, Button } from "react-native";
+import { Icon } from "react-native-elements";
+import { createStackNavigator, createAppContainer } from "react-navigation";
 import Visits from "./Visits";
 
 const styles = StyleSheet.create({

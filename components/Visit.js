@@ -1,6 +1,6 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
-
+import { View, StyleSheet, Text } from "react-native";
+import { Icon } from "react-native-elements";
 import LinearGradient from "react-native-linear-gradient";
 
 const styles = StyleSheet.create({
@@ -23,9 +23,8 @@ const styles = StyleSheet.create({
   //   paddingHorizontal: 36
   // },
   visit: {
-    borderRadius: 12,
     paddingHorizontal: 30,
-    marginHorizontal: 10,
+
     marginTop: 20,
     backgroundColor: "white",
     height: 90
@@ -46,6 +45,7 @@ const styles = StyleSheet.create({
 
 const Visit = ({ item }) => {
   let color;
+
   if (item.completed) {
     color = ["#1aff51", "#35ff4a", "#00ff3d"];
   } else {
@@ -68,7 +68,17 @@ const Visit = ({ item }) => {
         ]}
       >
         <Text style={{ fontSize: 25, fontWeight: "bold" }}>{item.title}</Text>
-        <Text>{item.date}</Text>
+
+        <Text style={{ fontSize: 18 }}>{item.date}</Text>
+
+        <Icon
+          raised
+          reverse
+          name="check"
+          type="font-awesome"
+          color="#21ea07"
+          onPress={() => console.log("hello")}
+        />
       </LinearGradient>
     </View>
   );
